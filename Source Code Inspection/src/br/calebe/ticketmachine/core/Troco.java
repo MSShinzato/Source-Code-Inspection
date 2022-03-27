@@ -8,14 +8,18 @@ import java.util.Iterator;
  */
 class Troco {
 
-
     public Troco(int valor) {
         PapelMoeda[] papeisMoeda;
-
+        int novoValor;
+        int valorOriginal=valor;
         papeisMoeda = new PapelMoeda[6];
         int count = 0;
-        while (valor % 100 != 0) {
+        while (true) {
+            novoValor=valorOriginal-100;
             count++;
+            if(novoValor<100){
+                break;
+            }
         }
         papeisMoeda[5] = new PapelMoeda(100, count);
         count = 0;
