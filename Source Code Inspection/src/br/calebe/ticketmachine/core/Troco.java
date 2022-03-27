@@ -2,13 +2,8 @@ package br.calebe.ticketmachine.core;
 
 import java.util.Iterator;
 
-/**
- *
- * @author Calebe de Paula Bianchini
- */
-class Troco {
-
-    public Troco(int valor) {
+public class Troco1{
+    public Troco1(int valor) {
         PapelMoeda[] papeisMoeda;
         int novoValor;
         int valorOriginal=valor;
@@ -23,8 +18,12 @@ class Troco {
         }
         papeisMoeda[5] = new PapelMoeda(100, count);
         count = 0;
-        while (valor % 50 != 0) {
+        while (true) {
+            novoValor=novoValor-50;
             count++;
+            if(novoValor<50){
+                break;
+            }
         }
         papeisMoeda[4] = new PapelMoeda(50, count);
         count = 0;
@@ -53,3 +52,4 @@ class Troco {
         return new TrocoIterator(this);
     }
 }
+
