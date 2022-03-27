@@ -1,9 +1,7 @@
 package br.calebe.ticketmachine.core;
 
-import java.util.Iterator;
-
-public class Troco2 {
-    public Troco2(int valor) {
+public class Troco3 {
+    public Troco3(int valor) {
         PapelMoeda[] papeisMoeda;
         int novoValor;
         int valorOriginal=valor;
@@ -36,8 +34,12 @@ public class Troco2 {
         }
         papeisMoeda[3] = new PapelMoeda(20, count);
         count = 0;
-        while (valor % 10 != 0) {
+        while (true) {
+            novoValor=novoValor-10;
             count++;
+            if(novoValor<10){
+                break;
+            }
         }
         papeisMoeda[2] = new PapelMoeda(10, count);
         count = 0;
@@ -56,4 +58,5 @@ public class Troco2 {
         return new TrocoIterator(this);
     }
 }
+
 
