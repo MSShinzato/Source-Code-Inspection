@@ -1,5 +1,7 @@
 package br.calebe.ticketmachine.core;
 
+import java.util.Iterator;
+
 public class Troco5 {
     
     public Troco4(int valor) {
