@@ -4,10 +4,10 @@ import java.util.Iterator;
 
 public class Troco5 {
     
-    PapelMoeda[] papeisMoeda;
+    
 
     public Troco4(int valor) {
-        
+        PapelMoeda[] papeisMoeda;
         int novoValor;
         int valorOriginal=valor;
         papeisMoeda = new PapelMoeda[6];
