@@ -12,14 +12,15 @@ public class TicketMachine {
 
     protected int valor;
     protected int saldo;
-    protected int[] papelMoeda = {2, 5, 10, 20, 50, 100};
-
+    
     public TicketMachine(int valor) {
         this.valor = valor;
         this.saldo = 0;
     }
 
     public void inserir(int quantia) throws PapelMoedaInvalidaException {
+        int[] papelMoeda = {2, 5, 10, 20, 50, 100};
+
         boolean achou = false;
         for (int i = 0; i < papelMoeda.length && !achou; i++) {
             if (papelMoeda[i] == quantia) {
